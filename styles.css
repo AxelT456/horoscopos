@@ -6,6 +6,7 @@
   --accent-text-color: #ffa35a;
   --secondary-text-color: #a3a1a1;
 
+  --small-spacing: 10px;
   --normal-spacing: 20px;
   --medium-spacing: 80px;
   --large-spacing: 120px;
@@ -123,7 +124,7 @@ body {
   margin: 0px auto;
   padding: var(--normal-spacing);
   width: var(100% - var(--normal-spacing));
-  margin-bottom: var(--medium-spacing);
+  margin-bottom: var(--large-spacing);
 }
 
 .wwd-section {
@@ -189,7 +190,141 @@ body {
   line-height: 1.5em;
 }
 
-/* Media queries */
+.zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--normal-spacing);
+  margin: var(--medium-spacing) 0px;
+  text-align: center;
+}
+
+.zodiac-sign {
+  display: flex;
+  flex-direction: column;
+  gap: var(--normal-spacing);
+  transition: all 300ms ease-out;
+}
+
+.zodiac-sign h3 {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.zodiac-sign p {
+  font-weight: 200;
+  line-height: 1.5em;
+}
+
+.zodiac-sign img {
+  width: 60%;
+  margin: 0px auto;
+  transition: color 300ms ease-out, transform 300ms ease-out;
+}
+
+.zodiac-sign:hover img {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}
+
+.aries:hover h3 {
+  color: #ffb3ba;
+}
+.aries:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(454%)
+    hue-rotate(297deg) brightness(103%) contrast(101%);
+}
+
+.tauro:hover h3 {
+  color: #ffdfba;
+}
+.tauro:hover h3 {
+  color: #ffdfba;
+}
+.tauro:hover img {
+  filter: brightness(0) saturate(100%) invert(93%) sepia(24%) saturate(587%)
+    hue-rotate(316deg) brightness(103%) contrast(101%);
+}
+
+.geminis:hover h3 {
+  color: #ffffba;
+}
+.geminis:hover img {
+  filter: brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(526%)
+    hue-rotate(5deg) brightness(106%) contrast(101%);
+}
+
+.cancer:hover h3 {
+  color: #baffc9;
+}
+.cancer:hover img {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(12%) saturate(489%)
+    hue-rotate(64deg) brightness(103%) contrast(96%);
+}
+
+.leo:hover h3 {
+  color: #bae1ff;
+}
+.leo:hover img {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(11%) saturate(523%)
+    hue-rotate(182deg) brightness(106%) contrast(101%);
+}
+
+.virgo:hover h3 {
+  color: #e3baff;
+}
+.virgo:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(757%)
+    hue-rotate(219deg) brightness(102%) contrast(101%);
+}
+
+.libra:hover h3 {
+  color: #ffb3e6;
+}
+.libra:hover img {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(19%) saturate(757%)
+    hue-rotate(289deg) brightness(103%) contrast(101%);
+}
+
+.escorpio:hover h3 {
+  color: #ffb3ff;
+}
+.escorpio:hover img {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(33%) saturate(627%)
+    hue-rotate(266deg) brightness(103%) contrast(101%);
+}
+
+.sagitario:hover h3 {
+  color: #ffcce6;
+}
+.sagitario:hover img {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(31%) saturate(422%)
+    hue-rotate(287deg) brightness(103%) contrast(101%);
+}
+
+.capricornio:hover h3 {
+  color: #ffccf9;
+}
+.capricornio:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(20%) saturate(526%)
+    hue-rotate(278deg) brightness(104%) contrast(101%);
+}
+
+.acuario:hover h3 {
+  color: #ffcce6;
+}
+.acuario:hover img {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(31%) saturate(422%)
+    hue-rotate(287deg) brightness(103%) contrast(101%);
+}
+
+.piscis:hover h3 {
+  color: #ffcccb;
+}
+.piscis:hover img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(18%) saturate(444%)
+    hue-rotate(304deg) brightness(103%) contrast(101%);
+}
 
 @media (min-width: 800px) {
   .hero-title {
@@ -207,12 +342,24 @@ body {
   .wwd-section {
     flex-direction: row;
   }
+
+  .zodiac-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (min-width: 1200px) {
   .hero-title {
     line-height: 1.1em;
     width: 50%;
+  }
+
+  .wwd-section {
+    gap: var(--large-spacing);
+  }
+
+  .zodiac-grid {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
