@@ -62,14 +62,25 @@ body {
 
 /* Tema masculino */
 .male-theme #login form button {
-  background-color: #4d759b; /* Azul pastel */
+  background-color: #4d759b; 
   color: #ffffff;
 }
+
 
 .male-theme #login form button:hover {
   background-color: #132f49;
 }
 
+/* Tema femenino*/
+.female-theme #login form button {
+  background-color: #d31794; 
+  color: #ffffff;
+}
+
+
+.female-theme #login form button:hover {
+  background-color: #8e0f63;
+}
 /* Tema por defecto */
 .default-theme #login form button {
   background-color: #575757; /* Gris claro */
