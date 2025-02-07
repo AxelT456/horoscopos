@@ -27,11 +27,15 @@ body {
 
 #login {
   background-color: #1c1d1e;
-  padding: 20px;
+  padding: 80px;
   border-radius: 8px;
   max-width: 400px;
   margin: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#separador {
+  height: 100px;
 }
 
 #login h2, label{
