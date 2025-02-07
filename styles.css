@@ -25,6 +25,62 @@ body {
   font-size: 18px;
 }
 
+#login {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#login form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#login form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#login form button {
+  background-color: #575757;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#login form button:hover {
+  background-color: #161616;
+}
+
+/* Tema masculino */
+.male-theme #login form button {
+  background-color: #4d759b; /* Azul pastel */
+  color: #ffffff;
+}
+
+.male-theme #login form button:hover {
+  background-color: #132f49;
+}
+
+/* Tema por defecto */
+.default-theme #login form button {
+  background-color: #575757; /* Gris claro */
+  color: #ffffff;
+}
+
+.default-theme #login form button:hover {
+  background-color: #161616;
+}
+
+
 .stars-container {
   background-color: var(--primary-bg-color);
   background-image: url("public/stars.png");

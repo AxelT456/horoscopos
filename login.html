@@ -111,5 +111,23 @@
         </div>
     </footer>
 </div>
+
+<script>
+    function setTheme(gender) {
+      document.body.classList.remove('male-theme', 'female-theme', 'default-theme');
+
+      if (gender === 'female') {
+        document.body.classList.add('female-theme');
+      } else if (gender === 'male') {
+        document.body.classList.add('male-theme');
+      } else {
+        document.body.classList.add('default-theme');
+      }
+    }
+    // Simulación: Cambiar el tema a femenino
+    setTheme("male"); // Cambia 'female' a 'male' para probar el tema masculino
+  </script>
+
 </body>
 </html>
+
