@@ -4,13 +4,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = htmlspecialchars($_POST['password']);
     $gender = htmlspecialchars($_POST['gender']);
 
-    // Simulación de validación (puedes agregar una base de datos aquí)
+    // Simulación de validación
     if ($username === "admin" && $password === "1234") {
         // Define el tema según el género
         $themeClass = $gender === "female" ? "female-theme" : "male-theme";
         echo "
         <!DOCTYPE html>
-        <html lang='en'>
+        <html lang='es'>
         <head>
             <meta charset='UTF-8'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -18,8 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <link rel='stylesheet' href='styles.css'>
         </head>
         <body class='$themeClass'>
-            <h1>¡Bienvenido, $username!</h1>
-            <p>Has iniciado sesión como " . ($gender === "female" ? "Mujer" : "Hombre") . ".</p>
+            <div class='container'>
+                <h1>¡Bienvenido, $username!</h1>
+                <p>Has iniciado sesión como " . ($gender === "female" ? "Mujer" : "Hombre") . ".</p>
+            </div>
         </body>
         </html>
         ";
@@ -30,3 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Método de acceso no permitido.";
 }
 ?>
+
+
+
