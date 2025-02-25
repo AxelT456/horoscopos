@@ -25,18 +25,39 @@ body {
   font-size: 18px;
 }
 
+/* Estilo dinámico para mujeres */
+body.female-theme {
+  background-color: #ffe6f2; /* Rosa */
+  color: #333;
+}
+
+/* Estilo dinámico para hombres */
+body.male-theme {
+  background-color: #e6f7ff; /* Azul */
+  color: #333;
+}
+
 #login {
-  background-color: #1c1d1e;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 80px;
   border-radius: 8px;
   max-width: 400px;
   margin: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#separador {
+  height: 100px;
+}
+
+#login h2 {
+  text-align: center;
+}
+
 #login h2, label{
   color: #fff;
 }
+
 
 #login form label {
   display: block;
@@ -64,40 +85,58 @@ body {
 
 #login form button:hover {
   background-color: #161616;
-} 
+}
+
+/* Fondo con efecto semitransparente */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5); /* Oscurece ligeramente */
+  z-index: -1;
+}
 
 /* Tema masculino */
-.male-theme #login form button {
-  background-color: #4d759b; 
-  color: #ffffff;
+.male-theme::before {
+  background-color: rgba(10, 25, 49, 0.9); /* Azul oscuro con transparencia */
 }
 
-
-.male-theme #login form button:hover {
-  background-color: #132f49;
+/* Tema femenino */
+.female-theme::before {
+  background-color: rgba(75, 1, 50, 0.9); /* Rosa oscuro con transparencia */
 }
 
-/* Tema femenino*/
-.female-theme #login form button {
-  background-color: #d31794; 
-  color: #ffffff;
+.container {
+  position: relative;
+  z-index: 1;
 }
 
-
-.female-theme #login form button:hover {
-  background-color: #8e0f63;
-}
-/* Tema por defecto */
-.default-theme #login form button {
-  background-color: #575757; /* Gris claro */
-  color: #ffffff;
+/* Tema femenino */
+.female-theme h2,
+.female-theme p {
+  color: #c32792;
 }
 
-.default-theme #login form button:hover {
-  background-color: #161616;
+/* Tema masculino */
+.male-theme h2,
+.male-theme p {
+  color: #4d759b;
 }
 
+.female-theme .stars-container
+{
+  background-color: #c32792;
+}
 
+.male-theme .stars-container
+{
+  background-color: #4d759b;
+}
 .stars-container {
   background-color: var(--primary-bg-color);
   background-image: url("public/stars.png");
@@ -659,6 +698,16 @@ footer {
 }
 
 .input-estilizado {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 4px;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.select-estilizado { /* Nueva clase para el select */
   padding: 12px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--secondary-text-color);
